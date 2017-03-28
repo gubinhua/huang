@@ -4,7 +4,10 @@ var str = '';
 var r1 = /^(.+)$/mg; //匹配换行
 var writepath = __dirname+'\\all\\all.txt';//合并后文件所在的路径
 
-function run(dirpath){	
+
+
+
+(function run(dirpath){	
 	var files = fs.readdirSync(dirpath);
 	
 	//依次读取文件
@@ -29,9 +32,9 @@ function run(dirpath){
 	console.log('正在写入文件...: '+writepath+'\n');
 	console.log('操作完毕！');
 		
-}
+})(path.join(__dirname,'files'))
 	
-run(path.join(__dirname,'files'));
+//run();
 
 //将文件内容转化为二位数组
 //@return 二维数组
