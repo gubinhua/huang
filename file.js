@@ -3,10 +3,6 @@ var path = require('path');
 var str = '';
 var r1 = /^(.+)$/mg; //匹配换行
 var writepath = __dirname+'\\all\\all.txt';//合并后文件所在的路径
-
-
-
-
 (function run(dirpath){	
 	var files = fs.readdirSync(dirpath);
 	
